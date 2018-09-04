@@ -4,23 +4,25 @@
 
 int main(void)
 {
-    char artista[10];
-    
-    strcpy(artista, "Roberto"); //atribuicao de string
+    char artista[20];
     
     printf("Digite o nome de um artista: ");
-    fflush(stdin);
+    //fflush(stdin);
+    //gets(artista);
     
-    gets(artista);
+    fgets(artista, 20, stdin);
     
-    if(strcmp ("Roberto")){
-        printf("O seu artista favorito e o Roberto Carlos");
+    if(strcmp (artista, "Roberto") == 0){
+        printf("O seu artista favorito e o Roberto Carlos!");
     }
-    else if(artista == "Edson"){
-        printf("O seu artista favorito e o Edson Celulari");
+    else if(strcmp (artista, "Edson") == 0){
+        printf("O seu artista favorito e o Edson Celulari!");
     }
-    else if(artista == "Claudia"){
-        printf("O sua artista favorita e a Claudia Raia");
+    else if(strcmp (artista, "Claudia") == 0){
+        printf("O sua artista favorita e a Claudia Raia!");
+    }
+    else{
+        printf("Artista desconhecido");
     }
     
     puts("\n\n");
